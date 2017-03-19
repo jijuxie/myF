@@ -5,3 +5,4 @@ define('DB_PWD','');
 define('DB_NAME','tp3');
 define('DB_PORT',3306);
 define('DB_TYPE','mysql');
+define('DB_CHARSET','utf8');

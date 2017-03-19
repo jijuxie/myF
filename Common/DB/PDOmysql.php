@@ -1,6 +1,4 @@
 <?php
-namespace aaaaa;
-
 class PDOmysql{
 
     public static  $config=array();			//设置连接参数，配置信息
@@ -57,10 +55,12 @@ class PDOmysql{
             $configs=self::$config;
             if (self::$pconnect)
             {
+
                 //开启长连接，添加到配置数组中
                 $configs['params'][constant("PDO::ATTR_PERSISTENT")]='true';
             }//if_pconnect
             try {
+
                 self::$link=new PDO($configs['dsn'], $configs['username'], $configs['password'],$configs['params']);
             } catch (PDOException $e) {
                 self::throw_exception($e->getMessage());

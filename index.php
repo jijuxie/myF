@@ -6,5 +6,5 @@
  * Time: 22:01
  */
 require 'jijuxie_config.php';
-
-$PDO = new \aaaaa\PDOmysql();
+require 'Common/DB/PDOmysql.php';
+$PDO = new PDOmysql();
